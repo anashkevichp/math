@@ -1,0 +1,68 @@
+\section{Шаг первый}
+
+Исходная система уравнений:
+
+\begin{equation}
+\label{eq:original}
+	\left\{
+		\begin{aligned}
+			\dot s &= ay + \gamma \\
+			\dot y &= -cy -s -xs \\
+			\dot x &= cx + ys
+		\end{aligned}
+	\right.
+\end{equation}
+
+Сделаем подстановку в виде $ s = \dfrac{s_0}{\tau^k} $, $ y = \dfrac{y_0}{\tau^l} $, $ x = \dfrac{x_0}{\tau^m} $
+
+Найдём $ \dot s $, $ \dot y $, $ \dot x $:
+
+$$
+	\left\{
+		\begin{aligned}
+			\dot s &= -\dfrac{ks_0}{\tau^{k+1}} \\
+			\dot y &= -\dfrac{ly_0}{\tau^{l+1}} \\
+			\dot x &= -\dfrac{mx_0}{\tau^{m+1}} 
+		\end{aligned}
+	\right.
+$$
+
+Полученные выражения подставим в исходную систему (\ref{eq:original}):
+
+\begin{equation}
+\label{eq:step1}
+	\left\{
+		\begin{aligned}
+			-\dfrac{ks_0}{\tau^{k+1}} &= a \dfrac{y_0}{\tau^l} + \gamma \\
+			-\dfrac{ly_0}{\tau^{l+1}} &= -c \dfrac{y_0}{\tau^l} - \dfrac{s_0}{\tau^k} - \dfrac{x_0}{\tau^m} \dfrac{s_0}{\tau^k} \\
+			-\dfrac{mx_0}{\tau^{m+1}} &= -c \dfrac{x_0}{\tau^m} + \dfrac{y_0}{\tau^l} \dfrac{s_0}{\tau^k}
+		\end{aligned}
+	\right.
+\end{equation}
+
+Учитывая, что $ k $, $ l $, $ m \in \textbf{Z} $, получим:
+ 
+$$
+	\left\{
+		\begin{aligned}
+			k + 1 &= l \\
+			l + 1 &= k \text{  или  } l + 1 = m + k \\
+			m + 1 &= l + k 
+		\end{aligned}
+	\right.
+$$
+
+Отбросив $ l + 1 = k $, и решив данную систему, однозначно получим что $ m = 2 $, $ k = 1 $, $ l = 2 $.
+
+В итоге получим систему:
+
+\begin{equation}
+\label{eq:step1_results}
+	\left\{
+		\begin{aligned}
+			-\dfrac{s_0}{\tau^2} &= a \dfrac{y_0}{\tau^2} + \gamma \\
+			-\dfrac{2y_0}{\tau^3} &= -c \dfrac{y_0}{\tau^2} - \dfrac{s_0}{\tau} - \dfrac{x_0 s_0}{\tau^3} \\
+			-\dfrac{2x_0}{\tau^{3}} &= -c \dfrac{x_0}{\tau^2} + \dfrac{y_0 s_0}{\tau^3}
+		\end{aligned}
+	\right.
+\end{equation}
