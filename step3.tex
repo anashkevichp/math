@@ -1,4 +1,4 @@
-\section{Шаг третий}
+\section{Третий шаг}
 
 Сделаем подстановку в виде
 
@@ -26,7 +26,7 @@ $$
 
 Полученные выражения подставим в исходную систему (\ref{eq:original}):
 
-\begin{equation}
+\begin{equation*}
 \label{eq:step3}
 	\left\{
 		\begin{aligned}
@@ -35,7 +35,7 @@ $$
 			-\dfrac{2x_0}{\tau^{3}} + \theta (r-2) \tau^{r-3} &= -c \left( \dfrac{x_0}{\tau^2} + \theta \tau^{r-2} \right) + \left( \dfrac{y_0}{\tau^2} + \beta \tau^{r-2} \right) \left( \dfrac{s_0}{\tau} + \alpha \tau^{r-1} \right)
 		\end{aligned}
 	\right.
-\end{equation}
+\end{equation*}
 
 Немного преобразуем данную систему
 
@@ -51,7 +51,7 @@ $$
 
 Рассмотрим коэффициенты при $ \tau^{r-2} $, $ \tau^{r-3} $, $ \tau^{r-3} $ в первом, во втором и в третьем уравнении соответственно
 
-\begin{equation}
+\begin{equation*}
 \label{eq:step2_coeff}
 	\left\{
 		\begin{aligned}
@@ -60,20 +60,22 @@ $$
 			\theta (r-2) &= \alpha y_0 + \beta s_0
 		\end{aligned}
 	\right.
-\end{equation}
+\end{equation*}
+
+\newpage
 
 Перепишем данную систему в следующем виде:
 
-\begin{equation}
+\begin{equation*}
 \label{eq:step2_coeff_determinant}
 	\left\{
 		\begin{aligned}
-			\alpha (r-1) &- a \beta &+ 0 = 0 \\
-			\alpha x_0   &+ \beta (r-2) &+ \theta s_0 = 0 \\
-			-\alpha y_0	 &- \beta s_0 &+ \theta (r-2) = 0 
+			\alpha (r-1) - a \beta + 0 &= 0 \\
+			\alpha x_0 + \beta (r-2) + \theta s_0 &= 0 \\
+			-\alpha y_0	- \beta s_0 + \theta (r-2) &= 0 
 		\end{aligned}
 	\right.
-\end{equation}
+\end{equation*}
 
 Составим матрицу из коэффициентов при $ \alpha $, $ \beta $, $ \theta $ 
 
@@ -129,6 +131,3 @@ $$
 		\end{aligned}
 	\right.
 $$
-
-
-
