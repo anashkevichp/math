@@ -1,0 +1,133 @@
+\section{Третий шаг}
+
+Сделаем подстановку в виде
+
+$$
+	\left\{
+		\begin{aligned}
+			s = \dfrac{s_0}{\tau} + \alpha \tau^{r-1} \\
+			y = \dfrac{y_0}{\tau^2} + \beta \tau^{r-2} \\
+			x = \dfrac{x_0}{\tau^2} + \theta \tau^{r-2} 
+		\end{aligned}
+	\right.
+$$
+
+Найдём $ \dot s $, $ \dot y $, $ \dot x $:
+
+$$
+	\left\{
+		\begin{aligned}
+			\dot s &= -\dfrac{s_0}{\tau^{2}} + \alpha (r-1) \tau^{r-2} \\
+			\dot y &= -\dfrac{2y_0}{\tau^{3}} + \beta (r-2) \tau^{r-3} \\
+			\dot x &= -\dfrac{2x_0}{\tau^{3}} + \theta (r-2) \tau^{r-3}
+		\end{aligned}
+	\right.
+$$
+
+Полученные выражения подставим в исходную систему (\ref{eq:original}):
+
+\begin{equation*}
+\label{eq:step3}
+	\left\{
+		\begin{aligned}
+			-\dfrac{s_0}{\tau^{2}} + \alpha (r-1) \tau^{r-2} &= a \left( \dfrac{y_0}{\tau^2} + \beta \tau^{r-2} \right) + \gamma \\
+			-\dfrac{2y_0}{\tau^{3}} + \beta (r-2) \tau^{r-3} &= -c \left( \dfrac{y_0}{\tau^2} + \beta \tau^{r-2} \right) - \left( \dfrac{s_0}{\tau} + \alpha \tau^{r-1} \right) - \left( \dfrac{x_0}{\tau^2} + \theta \tau^{r-2} \right) \left( \dfrac{s_0}{\tau} + \alpha \tau^{r-1} \right) \\
+			-\dfrac{2x_0}{\tau^{3}} + \theta (r-2) \tau^{r-3} &= -c \left( \dfrac{x_0}{\tau^2} + \theta \tau^{r-2} \right) + \left( \dfrac{y_0}{\tau^2} + \beta \tau^{r-2} \right) \left( \dfrac{s_0}{\tau} + \alpha \tau^{r-1} \right)
+		\end{aligned}
+	\right.
+\end{equation*}
+
+Немного преобразуем данную систему
+
+$$
+	\left\{
+		\begin{aligned}
+			-\dfrac{s_0}{\tau^{2}} + \alpha (r-1) \tau^{r-2} &= a \left( \dfrac{y_0}{\tau^2} + \beta \tau^{r-2} \right) + \gamma \\
+			-\dfrac{2y_0}{\tau^{3}} + \beta (r-2) \tau^{r-3} &= -c \left( \dfrac{y_0}{\tau^2} + \beta \tau^{r-2} \right) - \left( \dfrac{s_0}{\tau} + \alpha \tau^{r-1} \right) - \left( \dfrac{x_0s_0}{\tau^3} + \tau^{r-3}(x_0\alpha + s_0\theta) + \alpha\theta\tau^{2r-3} \right) \\
+			-\dfrac{2x_0}{\tau^{3}} + \theta (r-2) \tau^{r-3} &= -c \left( \dfrac{x_0}{\tau^2} + \theta \tau^{r-2} \right) + \left( \dfrac{y_0s_0}{\tau^3} + \tau^{r-3}(y_0\alpha + s_0\beta) + \alpha\beta\tau^{2r-3} \right)
+		\end{aligned}
+	\right.
+$$
+
+Рассмотрим коэффициенты при $ \tau^{r-2} $, $ \tau^{r-3} $, $ \tau^{r-3} $ в первом, во втором и в третьем уравнении соответственно
+
+\begin{equation*}
+\label{eq:step2_coeff}
+	\left\{
+		\begin{aligned}
+			\alpha (r-1) &= a \beta \\
+			\beta  (r-2) &= -\alpha x_0 - \theta s_0 \\
+			\theta (r-2) &= \alpha y_0 + \beta s_0
+		\end{aligned}
+	\right.
+\end{equation*}
+
+\newpage
+
+Перепишем данную систему в следующем виде:
+
+\begin{equation*}
+\label{eq:step2_coeff_determinant}
+	\left\{
+		\begin{aligned}
+			\alpha (r-1) - a \beta + 0 &= 0 \\
+			\alpha x_0 + \beta (r-2) + \theta s_0 &= 0 \\
+			-\alpha y_0	- \beta s_0 + \theta (r-2) &= 0 
+		\end{aligned}
+	\right.
+\end{equation*}
+
+Составим матрицу из коэффициентов при $ \alpha $, $ \beta $, $ \theta $ 
+
+\begin{equation}
+\label{eq:determinant}
+	\left(
+		\begin{array}{ccc}
+			r-1 & -a & 0 \\
+			x_0 & r-2 & s_0 \\
+			-y_0 & -s_0 & r-2 \\
+		\end{array}
+	\right)
+\end{equation}
+
+Найдем определитель данной матрицы и приравняем его к нулю:
+
+$ (r-1)(r-2)(r-2) + as_0y_0 + s^2_0(r-1) + ax_0(r-2) = 0 $
+
+$ (r-1)(r^2-4r+4) + as_0y_0 + rs^2_0 - s^2_0 + rax_0 - 2ax_0 = 0 $
+
+$ r^3 - 4r^2 + 4r - r^2 + 4r - 4 + as_0y_0 + rs^2_0 - s^2_0 + rax_0 - 2ax_0 = 0 $
+
+$ r^3 - 5r^2 + (8 + s^2_0 + ax_0)r - s^2_0 + as_0y_0 - 2ax_0 - 4 = 0 $
+
+При подстановке в данное уравнение выражений для $ x_0 $, $ y_0 $, $ s_0 $, уравнение разбивается на 2.
+
+\vspace{1mm}
+\textit{Первый случай:} $ x_0 = -\frac{2}{a} $, $ y_0 = \frac{2}{a}i $, $ s_0 = -2i $:
+\vspace{2mm}
+
+$ r^3 - 5r^2 + (8 - 4 + a(-\frac{2}{a}))r - 4 + a(-2i)(\frac{2}{a}i) + 4 + 2a(\frac{2}{a}) = 0 $
+
+$ r^3 - 5r^2 + 2r + 8 = 0 $
+
+\vspace{1mm}
+\textit{Второй случай:} $ x_0 = -\frac{2}{a} $, $ y_0 = -\frac{2}{a}i $, $ s_0 = 2i $:
+\vspace{2mm}
+
+$ r^3 - 5r^2 + (8 - 4 + a(-\frac{2}{a}))r - 4 + a(2i)(-\frac{2}{a}i) + 4 + 2a(\frac{2}{a}) = 0 $
+
+$ r^3 - 5r^2 + 2r + 8 = 0 $
+
+\vspace{1mm}
+
+Видно, что уравнения получились одинаковые. Корни уравнения:
+
+$$
+	\left[\
+		\begin{aligned}
+			r &= - 1 \\
+			r &= 2 \\
+			r &= 4
+		\end{aligned}
+	\right.
+$$
