@@ -5,22 +5,16 @@
 \usepackage{amssymb,amsfonts,amsmath,mathtext}
 \usepackage{cite,enumerate,float,indentfirst}
 
+
 \graphicspath{{images/}}
 
-\usetheme{Pittsburgh}
-\usecolortheme{whale}
+\usecolortheme{seagull}
 
-\setbeamercolor{footline}{fg=blue}
+\setbeamercolor{footline}{fg=gray}
 \setbeamertemplate{footline}{
   \leavevmode%
   \hbox{%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{}%
-    И. О. Фамилия, Организация
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{}%
-    Город, 20XX
-  \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{}%
+  \begin{beamercolorbox}[wd=1\paperwidth,ht=2.25ex,dp=1ex,right]{}%
   Стр. \insertframenumber{} из \inserttotalframenumber \hspace*{2ex}
   \end{beamercolorbox}}%
   \vskip0pt%
@@ -28,185 +22,352 @@
 
 \newcommand{\itemi}{\item[\checkmark]}
 
-\title{\small{Название презентации}}
 \author{\small{%
-\emph{Выступающий:}~И.О.Фамилия\\%
-\emph{Руководитель:}~проф.,~к.ф.-м.н.~И.О.Фамилия}\\%
-\vspace{30pt}%
-Полное название\\
-организации%
-\vspace{20pt}%
+Тема нашей презентации\\%
+\vspace{50pt}
+\emph{Выступающиe:}~П. С. Анашкевич, Р. И. Будный\\%
+\emph{Руководитель:}~проф.,~к.ф.-м.н.~В.В.Цегельник}
+\vspace{30pt}
 }
-\date{\small{Город, 20XX}}
+\date{\small{Минск, 2013}}
 
 \begin{document}
 
 \maketitle
 
-\begin{frame}
-\frametitle{Цели и задачи}
-\begin{itemize}
-  \item \textbf{Предмет исследования:} 
-  \item \textbf{Исследуемые характеристики:} 
-  \item \textbf{Цель исследования:} 
-  \item \textbf{Актуальность:} 
-\end{itemize}
-\end{frame}
+
 
 \begin{frame}
-\frametitle{Проблемы}
-\begin{itemize}
-  \item Проблема 1
-  \item Проблема 2
-  \item Проблема 3    
-\end{itemize}
+\frametitle{Постановка задачи}
+
+
+
 \end{frame}
 
-\begin{frame}
-\frametitle{План работ}
-\begin{enumerate}
-  \item \textbf{Задача 1}
-  \begin{itemize}
-    \item Подзадача 1-1
-    \item Подзадача 1-2
-  \end{itemize}
-  \item \textbf{Задача 2}
-  \begin{itemize}
-    \item Подзадача 2-1
-    \item Подзадача 2-2
-    \item Подзадача 2-3
-  \end{itemize}
-  \item \textbf{Задача 3}
-  \begin{itemize}
-    \item Подзадача 3-1
-    \item Подзадача 3-2
-    \item Подзадача 3-3
-  \end{itemize}
-\end{enumerate}
-\end{frame}
+
 
 \begin{frame}
-\frametitle{Список обыкновенный}
-\begin{itemize}
-  \item Пункт 1
-  \item Пункт 2
-  \item Пункт 3
-\end{itemize}
+
+\frametitle{Определение}
+
+Асинхронный двигатель --- электрическая машина переменного тока, частота вращения ротора которой не равна частоте вращения магнитного поля, создаваемого током обмотки статора.
+
+%%Про беличью клетку
+
 \end{frame}
 
+
 \begin{frame}
-\frametitle{Одиночное изображение}
+\frametitle{Устройство}
+
 \begin{figure}[H]
   \center
-  \includegraphics[width=0.8\linewidth]{latex}
+  \includegraphics[width=0.8\linewidth]{konstrukciya-1}
 \end{figure}
+
 \end{frame}
 
+
 \begin{frame}
-\frametitle{Формулы}
+\frametitle{Режимы работы}
+
+\begin{figure}[H]
+  \center
+  \includegraphics[width=0.6\linewidth]{zavisimost-1}
+\end{figure}
+
+\vspace{10pt}
+
+\small{s -- скольжение: $ s = 1 - \dfrac{n}{n_c} $}	
+
+\small{M -- крутящий момент}
+	
+
+\end{frame}
+
+
+
+
+\begin{frame}
+\frametitle{Поль Пенлеве}
+
+
+\begin{figure}[H]
+  \center
+  \includegraphics[width=0.4\linewidth]{penleve}
+\end{figure}
+
+\small{Французский математик и политик. Один из создателей аналитической теории дифференциальных уравнений.
+}
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{$\alpha $-метод Пенлеве}
+
+Основан на методе малого параметра Пуанкаре. 
+
+Используется для анализа дифференциальных уравнений. 
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Модель}
+
+\begin{figure}[H] 
+  \begin{center}
+
+  \begin{minipage}[h]{0.4\linewidth}
+
+  \includegraphics[width=1\linewidth]{magnitnoe_pole}
+
+  \center{\small{Вращающееся \\ магнитное поле}}
+  
+  \end{minipage}
+  \hfill   
+  \begin{minipage}[h]{0.4\linewidth}
+    
+  \includegraphics[width=1\linewidth]{obmotki}
+  
+  \center{\small{Схема обмоток}}
+  \end{minipage}    
+    
+  \end{center}
+\end{figure}
+
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{Физическое описание}
 $$
+        \left\{
+                \begin{aligned}
+                        L \dfrac{di_1(t)}{dt} + Ri_1(t) = e + SB(\sin\theta(t)) \dot \theta (t), \\
+                        L \dfrac{di_2(t)}{dt} + Ri_2(t) = e + SB(\cos\theta(t)) \dot \theta (t),
+\\
+  						I \ddot \theta = -\beta SB(i_1(t)\sin\theta + i_2(t)\cos\theta) - M.
+                \end{aligned}
+        \right.
+$$
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{Исходная система}
+$$
+        \left\{
+                \begin{aligned}
+                        \dot s &= ay + \gamma \\
+                        \dot y &= -cy -s -xs \\
+                        \dot x &= cx + ys
+                \end{aligned}
+        \right. 
+$$
+
+\vspace{10pt}
+
+\small{
+
+где $ s = \dot \theta_1 = \dot{(-\theta)}, a = \dfrac{\beta(SB)^2}{IL}, c = \dfrac{R}{L}, $
+
+\hspace{15pt} $ x = \dfrac{L}{SB} (i_1\cos\theta_1 + i_2\sin\theta_1),$
+
+\vspace{5pt}
+
+\hspace{15pt} $ y = \dfrac{L}{SB} (-i_1\sin\theta_1 + i_2\cos\theta_1).$
+}
+
+\end{frame}
+
+
+
+\begin{frame}
+
+\frametitle{Метод Пенлеве: шаг 1}
+
+\small{Пусть $ s = \dfrac{s_0}{\tau^k}, y = \dfrac{y_0}{\tau^l} , x = \dfrac{x_0}{\tau^m} $:}
+\vspace{10pt}
+$$      
+         \left\{
+                \begin{aligned}
+                        -\dfrac{ks_0}{\tau^{k+1}} &= a \dfrac{y_0}{\tau^l} + \gamma \\
+                        -\dfrac{ly_0}{\tau^{l+1}} &= -c \dfrac{y_0}{\tau^l} - \dfrac{s_0}{\tau^k} - \dfrac{x_0}{\tau^m} \dfrac{s_0}{\tau^k} \\
+                        -\dfrac{mx_0}{\tau^{m+1}} &= -c \dfrac{x_0}{\tau^m} + \dfrac{y_0}{\tau^l} \dfrac{s_0}{\tau^k}
+                \end{aligned}
+        \right.
+$$
+
+\end{frame}
+
+
+
+\begin{frame}
+
+\frametitle{Метод Пенлеве: шаг 1}
+
+\small{
+$$
+        \left\{
+                \begin{aligned}
+                        -\dfrac{s_0}{\tau^2} &= a \dfrac{y_0}{\tau^2} + \gamma \\
+                        -\dfrac{2y_0}{\tau^3} &= -c \dfrac{y_0}{\tau^2} - \dfrac{s_0}{\tau} - \dfrac{x_0 s_0}{\tau^3} \\
+                        -\dfrac{2x_0}{\tau^{3}} &= -c \dfrac{x_0}{\tau^2} + \dfrac{y_0 s_0}{\tau^3}
+                \end{aligned}
+        \right.
+$$
+}
+
+откуда получим, что:
+
+\vspace{10pt}
+
+\begin{minipage}[h!]{0.4\linewidth}
+$$
+\label{eq:step2_a}
 \left\{
-  \begin{array}{rl}
-    \dot x = & \sigma (y-x) \\
-    \dot y = & x (r - z) - y \\
-    \dot z = & xy - bz
-  \end{array}
+\begin{aligned}
+  x_0 &= - \dfrac{2}{a} \\
+  y_0 &= -\dfrac{2i}{a} \\
+  s_0 &= 2i \\
+\end{aligned}
 \right.
 $$
+\end{minipage}
+\hfill
+либо
+\hfill
+\begin{minipage}[h!]{0.4\linewidth}
+$$
+\label{eq:step2_b}
+\left\{
+\begin{aligned}
+  x_0 &= - \dfrac{2}{a} \\
+  y_0 &= \dfrac{2i}{a} \\
+  s_0 &= - 2i
+\end{aligned}
+\right.
+$$
+\end{minipage}
+
+
 \end{frame}
 
 \begin{frame}
-\frametitle{Составное изображение}
-\begin{figure}[h]
-  \begin{minipage}[h]{0.49\linewidth}
-    \textbf{Составная \\ подпись 1}
-    \center{\includegraphics[width=1\linewidth]{knuth1}}
-  \end{minipage}
-  \hfill
-  \begin{minipage}[h]{0.49\linewidth}
-    \textbf{Составная \\ подпись 2}
-    \center{\includegraphics[width=1\linewidth]{knuth2}}
-  \end{minipage}
-\end{figure}
+
+\frametitle{Метод Пенлеве: шаг 2}
+
+\small{Сделаем подстановку в виде
+ 
+\vspace{10pt} $ 
+s = \dfrac{s_0}{\tau} + \alpha \tau^{r-1},
+y = \dfrac{y_0}{\tau^2} + \beta \tau^{r-2},                         x = \dfrac{x_0}{\tau^2} + \theta \tau^{r-2} $:
+
+$$
+        \left\{
+                \begin{aligned}
+                        -\dfrac{s_0}{\tau^{2}} + \alpha (r-1) \tau^{r-2} &= a \left( \dfrac{y_0}{\tau^2} + \beta \tau^{r-2} \right) + \gamma \\
+                        -\dfrac{2y_0}{\tau^{3}} + \beta (r-2) \tau^{r-3} &= -c \left( \dfrac{y_0}{\tau^2} + \beta \tau^{r-2} \right) - \left( \dfrac{s_0}{\tau} + \alpha \tau^{r-1} \right) - \\ &- \left( \dfrac{x_0}{\tau^2} + \theta \tau^{r-2} \right) \left( \dfrac{s_0}{\tau} + \alpha \tau^{r-1} \right) \\
+                        -\dfrac{2x_0}{\tau^{3}} + \theta (r-2) \tau^{r-3} &= -c \left( \dfrac{x_0}{\tau^2} + \theta \tau^{r-2} \right) + \\ &+ \left( \dfrac{y_0}{\tau^2} + \beta \tau^{r-2} \right) \left( \dfrac{s_0}{\tau} + \alpha \tau^{r-1} \right)
+                \end{aligned}
+        \right.
+$$
+}
+
 \end{frame}
 
-\begin{frame}
-\frametitle{Таблица}
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Заголовок 1} & \textbf{Заголовок 2} \\
-\hline
-Сумма & $b+a$ \\
-\hline
-Разность & $a-b$ \\
-\hline
-Произведение & $a*b$ \\
-\hline
-\end{tabular}
-\end{frame}
+
 
 \begin{frame}
-\frametitle{Большой многоуровневый список}
-\begin{itemize}
-  \item \textbf{Пункт 1}
-    \begin{itemize}
-      \itemi Подпункт 1-1
-      \itemi Подпункт 1-2
-    \end{itemize}
-  \item \textbf{Пункт 2}
-    \begin{itemize}
-      \itemi Подпункт 2-1
-    \end{itemize}
-  \item \textbf{Пункт 3}
-    \begin{itemize}
-      \itemi Подпункт 3-1
-      \itemi Подпункт 3-2
-    \end{itemize}
-  \item \textbf{Пункт 4}
-    \begin{itemize}
-      \itemi Подпункт 4-1
-    \end{itemize}
-  \item \textbf{Пункт 5}
-    \begin{itemize}
-      \itemi Подпункт 5-1
-      \itemi Подпункт 5-2
-      \itemi Подпункт 5-3
-    \end{itemize}
-\end{itemize}
+
+\frametitle{Метод Пенлеве: шаг 2}
+
+Составим матрицу из коэффициентов при $ \alpha $, $ \beta $, $ \theta $:
+
+$$
+\left(
+                \begin{array}{ccc}
+                        r-1 & -a & 0 \\
+                        x_0 & r-2 & s_0 \\
+                        -y_0 & -s_0 & r-2 \\
+                \end{array}
+\right)
+$$
+
+Определитель приравняем к нулю, откуда получим:
+
+\center{$ r_1 = - 1, r_2 = 2, r_3 = 4 $.}
+
 \end{frame}
 
-\begin{frame}
-\frametitle{Четыре изображения}
-\begin{figure}[H]
-  \center
-    \includegraphics[width=0.4\linewidth]{latex}
-    \includegraphics[width=0.4\linewidth]{latex}\\
-    \includegraphics[width=0.4\linewidth]{latex}
-    \includegraphics[width=0.4\linewidth]{latex}
-\end{figure}
-\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Перспективы развития проекта}
-\begin{itemize}
-  \item Перспектива 1
-  \item Перспектива 2
-  \item Перспектива 3
-  \item Перспектива 4
-  \item Перспектива 5
-\end{itemize}
-\end{frame}
 
 \begin{frame}
-\frametitle{Результаты работы}
-\begin{itemize}
-  \item Результат 1
-  \item Результат 2
-  \item Результат 3
-  \item Результат 4
-\end{itemize}
+
+\frametitle{Метод Пенлеви: шаг 3}
+
+$$
+        \left\{
+                \begin{aligned}
+                        s &= \dfrac{s_{-1}}{\tau} + s_0 + s_1\tau + s_2\tau^2 + s_3\tau^3 + \ldots \\
+                        y &= \dfrac{y_{-2}}{\tau^2} + \dfrac{y_{-1}}{\tau} + y_0 + y_1\tau + y_2\tau^2 + y_3\tau^3 + \ldots \\
+                        x &= \dfrac{x_{-2}}{\tau^2} + \dfrac{x_{-1}}{\tau} + x_0 + x_1\tau + x_2\tau^2 + x_3\tau^3 + \ldots
+                \end{aligned}
+        \right.
+$$
 \end{frame}
+%
+%
+%
+%\begin{frame}
+%
+%\frametitle{Метод Пенлеви: шаг 3}
+%
+%Корни уравнения.
+%
+%\end{frame}
+%
+%
+%
+%\begin{frame}
+%
+%\frametitle{Метод Пенлеви: шаг 4}
+%
+%Описание подстановки.
+%
+%\end{frame}
+%
+%
+%\begin{frame}
+%
+%\frametitle{Метод Пенлеви: шаг 4}
+%
+%Полученные коэффициенты.
+%
+%\end{frame}
+%
+%
+%\begin{frame}
+%
+%\frametitle{Анализ решения}
+%
+%Анализ решения системы.
+%
+%\end{frame}
+%
+%\begin{frame}
+%
+%\frametitle{Выводы}
+%
+%Выводы
+%
+%\end{frame}
+%
 
 \begin{frame}
 \begin{center}
