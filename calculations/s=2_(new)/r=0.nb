@@ -1,0 +1,212 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      5016,        202]
+NotebookOptionsPosition[      4300,        172]
+NotebookOutlinePosition[      4635,        187]
+CellTagsIndexPosition[      4592,        184]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[""], "Input"],
+
+Cell[BoxData[""], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f1", "=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["s", 
+     RowBox[{"-", "1"}]], "+", 
+    RowBox[{"a", "*", 
+     SubscriptBox["y", 
+      RowBox[{"-", "2"}]]}]}], "\[Equal]", "0"}]}]], "Input",
+ CellChangeTimes->{{3.5883110816114883`*^9, 3.588311097168289*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SubscriptBox["s", 
+    RowBox[{"-", "1"}]], "+", 
+   RowBox[{"a", " ", 
+    SubscriptBox["y", 
+     RowBox[{"-", "2"}]]}]}], "\[Equal]", "0"}]], "Output",
+ CellChangeTimes->{3.588311097768845*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f2", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"2", "*", 
+     SubscriptBox["y", 
+      RowBox[{"-", "2"}]]}], "+", 
+    RowBox[{
+     SubscriptBox["x", 
+      RowBox[{"-", "2"}]], "*", 
+     SubscriptBox["s", 
+      RowBox[{"-", "1"}]]}]}], "\[Equal]", "0"}]}]], "Input",
+ CellChangeTimes->{{3.5883110990185223`*^9, 3.588311116338518*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    SubscriptBox["s", 
+     RowBox[{"-", "1"}]], " ", 
+    SubscriptBox["x", 
+     RowBox[{"-", "2"}]]}], "+", 
+   RowBox[{"2", " ", 
+    SubscriptBox["y", 
+     RowBox[{"-", "2"}]]}]}], "\[Equal]", "0"}]], "Output",
+ CellChangeTimes->{3.5883111169917707`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"f3", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"2", "*", 
+     SubscriptBox["x", 
+      RowBox[{"-", "2"}]]}], "+", 
+    RowBox[{
+     SubscriptBox["y", 
+      RowBox[{"-", "2"}]], "*", 
+     SubscriptBox["s", 
+      RowBox[{"-", "1"}]]}]}], "\[Equal]", "0"}]}]], "Input",
+ CellChangeTimes->{{3.588311118068781*^9, 3.588311134615855*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"2", " ", 
+    SubscriptBox["x", 
+     RowBox[{"-", "2"}]]}], "+", 
+   RowBox[{
+    SubscriptBox["s", 
+     RowBox[{"-", "1"}]], " ", 
+    SubscriptBox["y", 
+     RowBox[{"-", "2"}]]}]}], "\[Equal]", "0"}]], "Output",
+ CellChangeTimes->{3.588311135253398*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"res", "=", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"f1", ",", "f2", ",", "f3"}], "}"}], ",", " ", 
+    RowBox[{"{", 
+     RowBox[{
+      SubscriptBox["x", 
+       RowBox[{"-", "2"}]], ",", 
+      SubscriptBox["y", 
+       RowBox[{"-", "2"}]], ",", 
+      SubscriptBox["s", 
+       RowBox[{"-", "1"}]]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.588311190679693*^9, 3.588311229744664*^9}, {
+  3.588311280023142*^9, 3.588311299195979*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["x", 
+       RowBox[{"-", "2"}]], "\[Rule]", "0"}], ",", 
+     RowBox[{
+      SubscriptBox["y", 
+       RowBox[{"-", "2"}]], "\[Rule]", "0"}], ",", 
+     RowBox[{
+      SubscriptBox["s", 
+       RowBox[{"-", "1"}]], "\[Rule]", "0"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["x", 
+       RowBox[{"-", "2"}]], "\[Rule]", 
+      FractionBox["2", "a"]}], ",", 
+     RowBox[{
+      SubscriptBox["y", 
+       RowBox[{"-", "2"}]], "\[Rule]", 
+      RowBox[{"-", 
+       FractionBox["2", "a"]}]}], ",", 
+     RowBox[{
+      SubscriptBox["s", 
+       RowBox[{"-", "1"}]], "\[Rule]", "2"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      SubscriptBox["x", 
+       RowBox[{"-", "2"}]], "\[Rule]", 
+      FractionBox["2", "a"]}], ",", 
+     RowBox[{
+      SubscriptBox["y", 
+       RowBox[{"-", "2"}]], "\[Rule]", 
+      FractionBox["2", "a"]}], ",", 
+     RowBox[{
+      SubscriptBox["s", 
+       RowBox[{"-", "1"}]], "\[Rule]", 
+      RowBox[{"-", "2"}]}]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5883112999920797`*^9}]
+}, Open  ]]
+},
+WindowSize->{768, 349},
+WindowMargins->{{18, Automatic}, {0, Automatic}},
+FrontEndVersion->"7.0 for Linux x86 (64-bit) (October 28, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 26, 0, 32, "Input"],
+Cell[574, 22, 26, 0, 32, "Input"],
+Cell[CellGroupData[{
+Cell[625, 26, 289, 9, 32, "Input"],
+Cell[917, 37, 234, 8, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1188, 50, 363, 12, 32, "Input"],
+Cell[1554, 64, 307, 11, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1898, 80, 361, 12, 32, "Input"],
+Cell[2262, 94, 305, 11, 31, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2604, 110, 499, 15, 32, "Input"],
+Cell[3106, 127, 1178, 42, 70, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
