@@ -116,15 +116,37 @@ $$
 
 Из первой $ (r = 0) $ системы получаем:
 
-$$
-\left\{
-	\begin{aligned}
-		s_{-1} &= -2 \\
-		y_{-2} &= \dfrac{2}{a} \\
-		x_{-2} &= \dfrac{2}{a}
-	\end{aligned}
-\right.
-$$
+\begin{equation}
+	\label{eq:step4_a}
+	\left\{
+		\begin{aligned}
+		  x_{-2} &= \dfrac{2}{a} \\
+		  y_{-2} &= \dfrac{2}{a} \\
+		  s_{-1} &= -2 \\
+		\end{aligned}
+	\right.
+\end{equation}
+
+\begin{center}
+  либо
+\end{center}
+
+\begin{equation}
+	\label{eq:step4_b}
+	\left\{
+		\begin{aligned}
+		  x_{-2} &= \dfrac{2}{a} \\
+		  y_{-2} &= -\dfrac{2}{a} \\
+		  s_{-1} &= 2 \\
+		\end{aligned}
+	\right.
+\end{equation}
+
+Для нахождения остальных коэффициентов ($ x_{-1}, y_{-1}, s_{0}, x_{0}, y_{0}, s_{1} $ и т.д.) необходимо подставить полученные на данном этапе значения ($ x_{-2}, y_{-2}, s_{-1} $) в соответствующие системы уравнений.
+
+Рассмотрим два решения в отдельности. 
+
+Начнём с \textbf{первой ветки решения:} (\ref{eq:step4_a}). Дальнейшая подстановка даёт нам следующее решение.
 
 Вторая система $ (r = 1) $:
 
@@ -175,6 +197,79 @@ $$
 		x_2 &= -\dfrac{50c^4}{243} + \dfrac{14c^4}{243a} + \dfrac{c^2}{18} + \dfrac{ay^2_0}{2}\\
 		y_2 &= \dfrac{10c^4}{81} + \dfrac{2c^4}{81a} - \dfrac{c^2}{3} \\
 		s_3 &= \dfrac{10ac^4}{243} + \dfrac{2c^4}{243} - \dfrac{ac^2}{9}
+	\end{aligned}
+\right.
+$$
+
+Шестая система $ (r = 5) $:
+
+$$
+\left\{
+	\begin{aligned}
+		x_3 &= f_1(a,c,y_0) \\
+		y_3 &= f_2(a,c,y_0) \\
+		s_4 &= f_3(a,c,y_0)
+	\end{aligned}
+\right.
+$$
+
+\begin{center}
+	$ \ldots $
+\end{center}
+
+\newpage
+
+Рассмотрим \textbf{вторую ветку решения}. Из первой системы ($ r = 0 $) получили систему (\ref{eq:step4_b}). Дальнейшая подстановка даёт нам следующее решение.
+
+Вторая система $ (r = 1) $:
+
+$$
+\left\{
+	\begin{aligned}
+		s_{0} &= -\dfrac{c}{3} \\
+		y_{-1} &= 0 \\
+		x_{-1} &= \dfrac{4c}{3a}
+	\end{aligned}
+\right.
+$$
+
+Найденные значения подставим в третью систему $ (r = 2) $. После преобразований одного из уравнений получаем:
+$$ 
+	y_0 = y_0
+$$ 
+
+Таким образом $ y_0 $ - произвольный постоянный коэффициент, а $ x_0, s_1 $ выражаются через $ y_0 $:
+
+$$
+\left\{
+	\begin{aligned}
+		y_{0} &- \text{произвольный} \\
+		s_{1} &= ay_0 - \dfrac{2c^2}{3} \\
+		x_{0} &= \dfrac{8c^2}{9a} - 1 - y_0
+	\end{aligned}
+\right.
+$$
+
+Четвертая система $ (r = 3) $:
+
+$$
+\left\{
+	\begin{aligned}
+		y_1 &= \dfrac{20c^3}{27} - cy_0 - \dfrac{c}{2} \\
+		x_1 &= -\dfrac{4c^3}{27a} - \dfrac{cy_0}{3} + \dfrac{c}{2} \\
+		s_2 &= \dfrac{10c^3}{27} - \dfrac{cay_0}{2} - \dfrac{ca}{4}
+	\end{aligned}
+\right.
+$$
+
+Подставив в пятую систему $ (r = 4) $ найденные выражения получим, что $ y_2,s_3 $ не зависит от $ y_0 $:
+
+$$
+\left\{
+	\begin{aligned}
+		x_2 &= -\dfrac{50c^4}{243} + \dfrac{14c^4}{243a} + \dfrac{c^2}{18} + \dfrac{ay^2_0}{2}\\
+		y_2 &= -\dfrac{10c^4}{81} - \dfrac{2c^4}{81a} + \dfrac{c^2}{3} \\
+		s_3 &= -\dfrac{10ac^4}{243} - \dfrac{2c^4}{243} + \dfrac{ac^2}{9}
 	\end{aligned}
 \right.
 $$
