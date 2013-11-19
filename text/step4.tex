@@ -1,20 +1,19 @@
 \section{Четвертый шаг}
 
-Сделаем подстановку в виде бесконечных рядов для $ s $, $ y $, $ x $ 
+Сделаем подстановку в виде бесконечных рядов для $ s $, $ y $, $ x $:
 
-$$
-	\left\{
-		\begin{aligned}
-			s &= \dfrac{s_{-1}}{\tau} + s_0 + s_1\tau + s_2\tau^2 + s_3\tau^3 + \ldots \\
-			y &= \dfrac{y_{-2}}{\tau^2} + \dfrac{y_{-1}}{\tau} + y_0 + y_1\tau + y_2\tau^2 + y_3\tau^3 + \ldots \\
-			x &= \dfrac{x_{-2}}{\tau^2} + \dfrac{x_{-1}}{\tau} + x_0 + x_1\tau + x_2\tau^2 + x_3\tau^3 + \ldots
-		\end{aligned}
-	\right.
-$$
+\begin{equation*}
+  \left\{
+    \begin{aligned}
+      s &= \dfrac{s_{-1}}{\tau} + s_0 + s_1\tau + s_2\tau^2 + s_3\tau^3 + \ldots \\
+      y &= \dfrac{y_{-2}}{\tau^2} + \dfrac{y_{-1}}{\tau} + y_0 + y_1\tau + y_2\tau^2 + y_3\tau^3 + \ldots \\
+      x &= \dfrac{x_{-2}}{\tau^2} + \dfrac{x_{-1}}{\tau} + x_0 + x_1\tau + x_2\tau^2 + x_3\tau^3 + \ldots
+    \end{aligned}
+  \right.
+\end{equation*}
 
 Найдём $ \dot s $, $ \dot y $, $ \dot x $:
-
-$$
+\begin{equation*}
 	\left\{
 		\begin{aligned}
 			\dot s &= -\dfrac{s_{-1}}{\tau^{2}} + s_1 + 2s_2\tau + 3s_3\tau^2 + \ldots \\
@@ -22,25 +21,25 @@ $$
 			\dot x &= -\dfrac{2x_{-2}}{\tau^{3}} - \dfrac{x_{-1}}{\tau^2} + x_1 + 2x_2\tau + 3x_3\tau^2 + \ldots
 		\end{aligned}
 	\right.
-$$
-
-\newpage
+\end{equation*}
 
 Полученные выражения подставим в исходную систему (\ref{eq:original}):
+\begin{equation*}
+  \label{eq:step4}
+  \left\{
+    \begin{aligned}
+      -\dfrac{s_{-1}}{\tau^{2}} + s_1 + 2s_2\tau + 3s_3\tau^2 + \ldots = a \left( \dfrac{y_{-2}}{\tau^2} + \dfrac{y_{-1}}{\tau} + y_0 + y_1\tau + y_2\tau^2 + y_3\tau^3 + \ldots \right) + \gamma \\			
+      -\dfrac{2y_{-2}}{\tau^{3}} - \dfrac{y_{-1}}{\tau^2} + y_1 + 2y_2\tau + 3y_3\tau^2 + \ldots = -c \left( \dfrac{y_{-2}}{\tau^2} + \dfrac{y_{-1}}{\tau} + y_0 + y_1\tau + y_2\tau^2 + y_3\tau^3 + \ldots \right) - \\ - \left( \dfrac{s_{-1}}{\tau} + s_0 + s_1\tau + s_2\tau^2 + s_3\tau^3 + \ldots \right) - \left( \dfrac{x_{-2}}{\tau^2} + \dfrac{x_{-1}}{\tau} + x_0 + x_1\tau + x_2\tau^2 + x_3\tau^3 + \ldots \right) \cdot \\ \cdot \left( \dfrac{s_{-1}}{\tau} + s_0 + s_1\tau + s_2\tau^2 + s_3\tau^3 + \ldots \right) \\	
+      -\dfrac{2x_{-2}}{\tau^{3}} - \dfrac{x_{-1}}{\tau^2} + x_1 + 2x_2\tau + 3x_3\tau^2 + \ldots = -c \left( \dfrac{x_{-2}}{\tau^2} + \dfrac{x_{-1}}{\tau} + x_0 + x_1\tau + x_2\tau^2 + x_3\tau^3 + \ldots \right) + \\ + \left( \dfrac{y_{-2}}{\tau^2} + \dfrac{y_{-1}}{\tau} + y_0 + y_1\tau + y_2\tau^2 + y_3\tau^3 + \ldots \right) \cdot \left( \dfrac{s_{-1}}{\tau} + s_0 + s_1\tau + s_2\tau^2 + s_3\tau^3 + \ldots \right)
+    \end{aligned}
+  \right.
+\end{equation*}
 
-\begin{eqnarray*}
-	\left\{
-		\begin{aligned}
-			-\dfrac{s_{-1}}{\tau^{2}} + s_1 + 2s_2\tau + 3s_3\tau^2 + \ldots = a \left( \dfrac{y_{-2}}{\tau^2} + \dfrac{y_{-1}}{\tau} + y_0 + y_1\tau + y_2\tau^2 + y_3\tau^3 + \ldots \right) + \gamma \\			
-			-\dfrac{2y_{-2}}{\tau^{3}} - \dfrac{y_{-1}}{\tau^2} + y_1 + 2y_2\tau + 3y_3\tau^2 + \ldots = -c \left( \dfrac{y_{-2}}{\tau^2} + \dfrac{y_{-1}}{\tau} + y_0 + y_1\tau + y_2\tau^2 + y_3\tau^3 + \ldots \right) - \\ - \left( \dfrac{s_{-1}}{\tau} + s_0 + s_1\tau + s_2\tau^2 + s_3\tau^3 + \ldots \right) - \left( \dfrac{x_{-2}}{\tau^2} + \dfrac{x_{-1}}{\tau} + x_0 + x_1\tau + x_2\tau^2 + x_3\tau^3 + \ldots \right) \cdot \\ \cdot \left( \dfrac{s_{-1}}{\tau} + s_0 + s_1\tau + s_2\tau^2 + s_3\tau^3 + \ldots \right) \\	
-			-\dfrac{2x_{-2}}{\tau^{3}} - \dfrac{x_{-1}}{\tau^2} + x_1 + 2x_2\tau + 3x_3\tau^2 + \ldots = -c \left( \dfrac{x_{-2}}{\tau^2} + \dfrac{x_{-1}}{\tau} + x_0 + x_1\tau + x_2\tau^2 + x_3\tau^3 + \ldots \right) + \\ + \left( \dfrac{y_{-2}}{\tau^2} + \dfrac{y_{-1}}{\tau} + y_0 + y_1\tau + y_2\tau^2 + y_3\tau^3 + \ldots \right) \cdot \left( \dfrac{s_{-1}}{\tau} + s_0 + s_1\tau + s_2\tau^2 + s_3\tau^3 + \ldots \right)
-		\end{aligned}
-	\right.
-\end{eqnarray*}
+\pagebreak 
 
-Рассмотрим коэффициенты при одинаковых степенях $ \tau $, начиная с наинизшего. Составим соответствующие системы уравнений.
- 
-$$
+Рассмотрим коэффициенты при одинаковых степенях $ \tau $, начиная с наинизшей.
+Составим соответствующие системы уравнений:
+\begin{equation*}
 	\begin{aligned}
 		(r = 0) &:		
 		\left\{
@@ -105,52 +104,60 @@ $$
 			\end{aligned}
 		\right. 
 	\end{aligned}
-$$
+\end{equation*}
+
 \begin{center}
 	$ \ldots $
 \end{center}
-
-\clearpage
 						
 Поочередно рассмотрим каждую из систем, постепенно подставляя найденные значения.
 
 Из первой $ (r = 0) $ системы получаем:
+\vspace{0.5em}
 
-\begin{equation}
-	\label{eq:step4_a}
-	\left\{
-		\begin{aligned}
-		  x_{-2} &= \dfrac{2}{a} \\
-		  y_{-2} &= \dfrac{2}{a} \\
-		  s_{-1} &= -2 \\
-		\end{aligned}
-	\right.
-\end{equation}
+\begin{minipage}[h!]{0.35\linewidth}
+  \begin{equation}
+    \label{eq:step4_a}
+    \left\{
+      \begin{aligned}
+        x_{-2} &= \dfrac{2}{a} \\
+        y_{-2} &= \dfrac{2}{a} \\
+        s_{-1} &= -2 \\
+      \end{aligned}
+    \right.
+  \end{equation}
+\end{minipage}
+\hfill
+либо
+\hfill
+\begin{minipage}[h!]{0.35\linewidth}
+  \begin{equation}
+    \label{eq:step4_b}
+    \left\{
+      \begin{aligned}
+        x_{-2} &= \dfrac{2}{a} \\
+        y_{-2} &= -\dfrac{2}{a} \\
+        s_{-1} &= 2 \\
+      \end{aligned}
+    \right.
+  \end{equation}
+\end{minipage}
 
-\begin{center}
-  либо
-\end{center}
+\vspace{0.5em}
 
-\begin{equation}
-	\label{eq:step4_b}
-	\left\{
-		\begin{aligned}
-		  x_{-2} &= \dfrac{2}{a} \\
-		  y_{-2} &= -\dfrac{2}{a} \\
-		  s_{-1} &= 2 \\
-		\end{aligned}
-	\right.
-\end{equation}
+Для нахождения остальных коэффициентов ($ x_{-1}, y_{-1}, s_{0},
+x_{0}, y_{0}, s_{1} $ и т.д.) необходимо подставить полученные на
+данном шаге значения ($ x_{-2}, y_{-2}, s_{-1} $) в соответствующие
+системы уравнений.
 
-Для нахождения остальных коэффициентов ($ x_{-1}, y_{-1}, s_{0}, x_{0}, y_{0}, s_{1} $ и т.д.) необходимо подставить полученные на данном этапе значения ($ x_{-2}, y_{-2}, s_{-1} $) в соответствующие системы уравнений.
+Рассмотрим два решения в отдельности.
 
-Рассмотрим два решения в отдельности. 
+\clearpage
 
-Начнём с \textbf{первой ветки решения:} (\ref{eq:step4_a}). Дальнейшая подстановка даёт нам следующее решение.
-
-Вторая система $ (r = 1) $:
-
-$$
+Начнём с \textit{\textbf{первой ветки решения}}~\ref{eq:step4_a}. Дальнейшие подстановки дают нам следующие значения:
+\begin{itemize}
+\item Вторая система $ (r = 1) $:
+\begin{equation*}
 \left\{
 	\begin{aligned}
 		s_{0} &= \dfrac{c}{3} \\
@@ -158,16 +165,16 @@ $$
 		x_{-1} &= \dfrac{4c}{3a}
 	\end{aligned}
 \right.
-$$
+\end{equation*}
 
-Найденные значения подставим в третью систему $ (r = 2) $. После преобразований одного из уравнений получаем:
-$$ 
+\item Найденные значения подставим в третью систему $ (r = 2) $.
+  После преобразований одного из уравнений получаем:
+\begin{equation*} 
 	y_0 = y_0
-$$ 
+\end{equation*} 
 
-Таким образом $ y_0 $ - произвольный постоянный коэффициент, а $ x_0, s_1 $ выражаются через $ y_0 $:
-
-$$
+Таким образом, $ y_0 $ - произвольный постоянный коэффициент, а $ x_0, s_1 $ выражаются через $ y_0 $:
+\begin{equation*}
 \left\{
 	\begin{aligned}
 		y_{0} &- \text{произвольный} \\
@@ -175,11 +182,10 @@ $$
 		x_{0} &= \dfrac{8c^2}{9a} - 1 + y_0
 	\end{aligned}
 \right.
-$$
+\end{equation*}
 
-Четвертая система $ (r = 3) $:
-
-$$
+\item Четвертая система $ (r = 3) $:
+\begin{equation*}
 \left\{
 	\begin{aligned}
 		y_1 &= -\dfrac{20c^3}{27} - cy_0 + \dfrac{c}{2} \\
@@ -187,11 +193,10 @@ $$
 		s_2 &= -\dfrac{10c^3}{27} - \dfrac{cay_0}{2} + \dfrac{ca}{4}
 	\end{aligned}
 \right.
-$$
+\end{equation*}
 
-Подставив в пятую систему $ (r = 4) $ найденные выражения получим, что $ y_2,s_3 $ не зависит от $ y_0 $:
-
-$$
+\item Подставив в пятую систему $ (r = 4) $ найденные выражения получим, что $ y_2,s_3 $ не зависит от $ y_0 $:
+\begin{equation*}
 \left\{
 	\begin{aligned}
 		x_2 &= -\dfrac{50c^4}{243} + \dfrac{14c^4}{243a} + \dfrac{c^2}{18} + \dfrac{ay^2_0}{2}\\
@@ -199,11 +204,10 @@ $$
 		s_3 &= \dfrac{10ac^4}{243} + \dfrac{2c^4}{243} - \dfrac{ac^2}{9}
 	\end{aligned}
 \right.
-$$
+\end{equation*}
 
-Шестая система $ (r = 5) $:
-
-$$
+\item Шестая система $ (r = 5) $:
+\begin{equation*}
 \left\{
 	\begin{aligned}
 		x_3 &= f_1(a,c,y_0) \\
@@ -211,19 +215,21 @@ $$
 		s_4 &= f_3(a,c,y_0)
 	\end{aligned}
 \right.
-$$
+\end{equation*}
 
 \begin{center}
 	$ \ldots $
 \end{center}
 
+\end{itemize}
 \newpage
 
-Рассмотрим \textbf{вторую ветку решения}. Из первой системы ($ r = 0 $) получили систему (\ref{eq:step4_b}). Дальнейшая подстановка даёт нам следующее решение.
+Рассмотрим \textit{\textbf{вторую ветку решения}}. Из первой системы ($ r = 0 $) получили систему (\ref{eq:step4_b}).
+Дальнейшие подстановки дают нам следующие значения:
+\begin{itemize}
 
-Вторая система $ (r = 1) $:
-
-$$
+\item Вторая система $ (r = 1) $:
+\begin{equation*}
 \left\{
 	\begin{aligned}
 		s_{0} &= -\dfrac{c}{3} \\
@@ -231,16 +237,15 @@ $$
 		x_{-1} &= \dfrac{4c}{3a}
 	\end{aligned}
 \right.
-$$
+\end{equation*}
 
-Найденные значения подставим в третью систему $ (r = 2) $. После преобразований одного из уравнений получаем:
-$$ 
+\item Найденные значения подставим в третью систему $ (r = 2) $. После преобразований одного из уравнений получаем:
+$$
 	y_0 = y_0
 $$ 
 
-Таким образом $ y_0 $ - произвольный постоянный коэффициент, а $ x_0, s_1 $ выражаются через $ y_0 $:
-
-$$
+Таким образом $ y_0 $ --- произвольный постоянный коэффициент, а $ x_0, s_1 $ выражаются через $ y_0 $:
+\begin{equation*}
 \left\{
 	\begin{aligned}
 		y_{0} &- \text{произвольный} \\
@@ -248,11 +253,10 @@ $$
 		x_{0} &= \dfrac{8c^2}{9a} - 1 - y_0
 	\end{aligned}
 \right.
-$$
+\end{equation*}
 
-Четвертая система $ (r = 3) $:
-
-$$
+\item Четвертая система $ (r = 3) $:
+\begin{equation*}
 \left\{
 	\begin{aligned}
 		y_1 &= \dfrac{20c^3}{27} - cy_0 - \dfrac{c}{2} \\
@@ -260,11 +264,10 @@ $$
 		s_2 &= \dfrac{10c^3}{27} - \dfrac{cay_0}{2} - \dfrac{ca}{4}
 	\end{aligned}
 \right.
-$$
+\end{equation*}
 
-Подставив в пятую систему $ (r = 4) $ найденные выражения получим, что $ y_2,s_3 $ не зависит от $ y_0 $:
-
-$$
+\item Подставив в пятую систему $ (r = 4) $ найденные выражения, получим, что $ y_2,s_3 $ не зависит от $ y_0 $:
+\begin{equation*}
 \left\{
 	\begin{aligned}
 		x_2 &= -\dfrac{50c^4}{243} + \dfrac{14c^4}{243a} + \dfrac{c^2}{18} + \dfrac{ay^2_0}{2}\\
@@ -272,11 +275,10 @@ $$
 		s_3 &= -\dfrac{10ac^4}{243} - \dfrac{2c^4}{243} + \dfrac{ac^2}{9}
 	\end{aligned}
 \right.
-$$
+\end{equation*}
 
-Шестая система $ (r = 5) $:
-
-$$
+\item Шестая система $ (r = 5) $:
+\begin{equation*}
 \left\{
 	\begin{aligned}
 		x_3 &= f_1(a,c,y_0) \\
@@ -284,8 +286,10 @@ $$
 		s_4 &= f_3(a,c,y_0)
 	\end{aligned}
 \right.
-$$
+\end{equation*}
 
 \begin{center}
 	$ \ldots $
 \end{center}
+
+\end{itemize}
